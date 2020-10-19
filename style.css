@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #6020BD;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.options a {
+    font-size: 13pt;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.login {
+    margin-left: 1rem;
+}
+
+#btn-entrar {
+    padding: 5px 15px;
+    text-align: center;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    background-color: #9C78ED;
+    border-radius: 50px;
+    outline: none;
+}
+
+#btn-cadastro {
+    padding: 5px 15px;
+    text-align: center;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    background-color: #6020BD;
+    border-radius: 50px;
+    outline: none;
+}
+
+.home {
+    height: 600px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-home {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-saiba-mais {
+    background-color: #9C78ED;
+    color: white;
+    margin-top: 2rem;
+    font-size: 18pt;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+.img-home {
+    width: 60%;
+}
+
+.img-home img {
+    width: 100%;
+}
+
+.quem-somos {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.quem-somos h1 {
+    margin-bottom: 2rem;
+}
+
+.quem-somos p {
+    font-size: 18pt;
+    margin-bottom: 3rem;
+}
+
+.ajudar {
+    padding: 0 3rem;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajudar img {
+    width: 60%;
+}
+
+.construir {
+    padding: 0 3rem;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.construir img {
+    width: 50%;
+}
+
+.vencer {
+    padding: 0 3rem;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vencer img {
+    width: 50%;
+}
+
+.como-funciona {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.como-funciona h1 {
+    margin-bottom: 2rem;
+}
+
+.como-funciona p {
+    font-size: 16pt;
+    margin-bottom: 3rem;
+}
+
+.como-funciona img {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.cestas {
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cestas h1 {
+    margin-bottom: 4rem;
+}
+
+.grid-cestas {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-cestas {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9C78ED;
+    border-radius: 20px;
+}
+
+.card-cestas h2 {
+    margin: 10px 0 25px 0;
+    color: white;
+}
+
+.card-cestas h6 {
+    color: white;
+}
+
+.c1 img {
+    margin-top: -65px;
+    margin-bottom: 25px;
+    width: 110px;
+}
+
+.c2 img {
+    margin-top: -75px;
+    margin-bottom: 15px;
+    width: 130px;
+}
+
+.c3 img {
+    margin-top: -85px;
+    width: 150px;
+}
+
+#btn-doar {
+    padding: 8px 30px;
+    border-radius: 50px;
+    background-color: #6020BD;
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+#btn-doar:hover {
+    margin-top: 3px;
+    transition: ease-in-out;
+}
+
+.contato {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato h1 {
+    margin-bottom: 3rem;
+}
+
+.grid-contato {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-contato {
+    width: 50%;
+    padding: 0 5rem;
+}
+
+.form-group input, textarea {
+    margin-bottom: 1rem;
+}
+
+.form-group input:focus {
+    border-color: #6020BD;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px #6020BD;
+    outline: 0 none;
+}
+
+#btn-contato {
+    padding: 7px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: #6020BD;
+}
+
+.time {
+    width: 50%;
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.time a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.integrante {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.integrante:hover {
+    margin-left: 1rem;
+}
+
+.img-integrante {
+    width: 100px;
+    height: 100px;
+    margin-right: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 20px;
+}
+
+#img-leonardo {
+    background-image: url(/images/leonardo.png);
+}
+
+#img-reinaldo {
+    background-image: url(/images/reinaldo.png);
+}
+
+#img-renan {
+    background-image: url(/images/renan.png);
+}
+
+#img-tamires {
+    background-image: url(/images/tamires.png);
+}
+
+.mapa {
+    padding: 0 5rem;
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    padding: 1.5rem 10rem;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: #6020BD;
+}
+
+.help-to-eat img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.help-to-eat a {
+    text-decoration: none;
+    color: white;
+}
+
+.realizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.realizacao h4{
+    color: white;
+}
+
+.img-re img {
+    margin: 1rem;
+}
