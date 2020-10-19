@@ -1,5 +1,7 @@
 <?php
-    require __DIR__ . '\\controller\\adminController.php';
+    require __DIR__ . "\\controller\\adminController.php";
+
+    $cesta = $cestaModel->getCesta();
 ?>
 
 <!DOCTYPE html>
@@ -83,25 +85,25 @@
                 <div class="card-cestas c1">
                     <img src="images/Box.png">
                     <h2><?= $cesta[0]["tipo"] ?></h2>
-                    <h6>15 - Alimentos</h6>
-                    <h6>5 - Higiene Pessoal</h6>
+                    <h6><?= $cesta[0]["alimentos"] ?> - Alimentos</h6>
+                    <h6><?= $cesta[0]["higiene"] ?> - Higiene Pessoal</h6>
                     <h2>R$ <?=  $cesta[0]["valor"] ?></h2>
                     <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                 </div>
                 <div class="card-cestas c2">
                     <img src="images/Box.png">
-                    <h2>Plus</h2>
-                    <h6>30 - Alimentos</h6>
-                    <h6>10 - Higiene Pessoal</h6>
-                    <h2>R$ 100,00</h2>
+                    <h2><?= $cesta[1]["tipo"] ?></h2>
+                    <h6><?= $cesta[1]["alimentos"] ?> - Alimentos</h6>
+                    <h6><?= $cesta[1]["higiene"] ?> - Higiene Pessoal</h6>
+                    <h2>R$ <?= $cesta[1]["valor"] ?></h2>
                     <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                 </div>
                 <div class="card-cestas c3">
                     <img src="images/Box.png">
-                    <h2>Max</h2>
-                    <h6>60 - Alimentos</h6>
-                    <h6>20 - Higiene Pessoal</h6>
-                    <h2>R$ 200,00</h2>
+                    <h2><?= $cesta[2]["tipo"] ?></h2>
+                    <h6><?= $cesta[2]["alimentos"] ?> - Alimentos</h6>
+                    <h6><?= $cesta[2]["higiene"] ?> - Higiene Pessoal</h6>
+                    <h2>R$ <?= $cesta[2]["valor"] ?></h2>
                     <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                 </div>
             </div>
