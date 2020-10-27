@@ -4,6 +4,4 @@
 
     $cestaModel = new cestaModel();
 
-    
-
 ?>

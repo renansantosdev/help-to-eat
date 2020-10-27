@@ -13,7 +13,7 @@
         }
 
         public function save($tipo, $alimentos, $higiene, $valor) {
-            array_push($cesta, array("tipo" => $tipo, "alimentos" => $alimentos, "higiene" => $higiene, "valor" => $valor));
+            array_push($this->cesta, array("tipo" => $tipo, "alimentos" => $alimentos, "higiene" => $higiene, "valor" => $valor));
         }
 
         public function update($index, $tipo, $alimentos, $higiene, $valor) {

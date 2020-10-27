@@ -2,14 +2,12 @@
 
     class userModel {
 
-        private $userAdmin = define("USER", array("name" => "admin", "user" => "admin@helptoeat.com", "password" => "admin"));
-
-        private $user = array();
+        private $user = array(USERADMIN, USER);
 
         public function save($name, $user, $password) {
             if (!empty($name) && !empty($user) && !empty($password)) {
 
-                array_push($user, array("name" => $name, "user" => $user, "password" => $password));
+                array_push($this->user, array("name" => $name, "user" => $user, "password" => $password));
 
             }
         }
@@ -38,6 +36,10 @@
 
         public function listAll() {
             return $this->user;
+        }
+
+        public function getUserAdmin() {
+            return $this->userAdmin;
         }
 
         public function getUser() {

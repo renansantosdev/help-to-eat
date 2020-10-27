@@ -1,7 +1,7 @@
 <?php
-    require __DIR__ . "\\controller\\adminController.php";
+require __DIR__ . "\\controller\\adminController.php";
 
-    $cesta = $cestaModel->getCesta();
+$cesta = $cestaModel->getCesta();
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="imagem/png" href="/view/images/Box.png">
     <title>Help to eat</title>
@@ -19,13 +18,13 @@
 
 <body>
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
     <div class="container">
 
         <nav>
             <div class="logo">
-                <a href=""><img src="images/Logo.png"></a>
+                <a href=""><img src="view/images/Logo.png"></a>
             </div>
             <div class="options">
                 <a href="#quem-somos">Quem somos</a>
@@ -33,7 +32,7 @@
                 <a href="#cestas">Cestas</a>
                 <a href="#contato">Contato</a>
                 <div class="login">
-                    <button id="btn-entrar" onclick="desenvolvimento()">Entrar</button>
+                    <a href="/view/login.php"><button id="btn-entrar">Entrar</button></a>
                     <a href="/view/cadastro.php"><button id="btn-cadastro">Cadastro</button></a>
                 </div>
             </div>
@@ -82,30 +81,36 @@
         <div class="cestas" id="cestas">
             <h1>Cestas</h1>
             <div class="grid-cestas">
-                <div class="card-cestas c1">
-                    <img src="images/Box.png">
-                    <h2><?= $cesta[0]["tipo"] ?></h2>
-                    <h6><?= $cesta[0]["alimentos"] ?> - Alimentos</h6>
-                    <h6><?= $cesta[0]["higiene"] ?> - Higiene Pessoal</h6>
-                    <h2>R$ <?=  $cesta[0]["valor"] ?></h2>
-                    <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
-                </div>
-                <div class="card-cestas c2">
-                    <img src="images/Box.png">
-                    <h2><?= $cesta[1]["tipo"] ?></h2>
-                    <h6><?= $cesta[1]["alimentos"] ?> - Alimentos</h6>
-                    <h6><?= $cesta[1]["higiene"] ?> - Higiene Pessoal</h6>
-                    <h2>R$ <?= $cesta[1]["valor"] ?></h2>
-                    <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
-                </div>
-                <div class="card-cestas c3">
-                    <img src="images/Box.png">
-                    <h2><?= $cesta[2]["tipo"] ?></h2>
-                    <h6><?= $cesta[2]["alimentos"] ?> - Alimentos</h6>
-                    <h6><?= $cesta[2]["higiene"] ?> - Higiene Pessoal</h6>
-                    <h2>R$ <?= $cesta[2]["valor"] ?></h2>
-                    <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
-                </div>
+                <?php if (!empty($cesta[0])) { ?>
+                    <div class="card-cestas c1">
+                        <img src="view/images/Box.png">
+                        <h2><?= $cesta[0]["tipo"] ?></h2>
+                        <h6><?= $cesta[0]["alimentos"] ?> - Alimentos</h6>
+                        <h6><?= $cesta[0]["higiene"] ?> - Higiene Pessoal</h6>
+                        <h2>R$ <?= $cesta[0]["valor"] ?></h2>
+                        <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($cesta[1])) { ?>
+                    <div class="card-cestas c2">
+                        <img src="view/images/Box.png">
+                        <h2><?= $cesta[1]["tipo"] ?></h2>
+                        <h6><?= $cesta[1]["alimentos"] ?> - Alimentos</h6>
+                        <h6><?= $cesta[1]["higiene"] ?> - Higiene Pessoal</h6>
+                        <h2>R$ <?= $cesta[1]["valor"] ?></h2>
+                        <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
+                    </div>
+                <?php } ?>
+                <?php if (!empty($cesta[2])) { ?>
+                    <div class="card-cestas c3">
+                        <img src="view/images/Box.png">
+                        <h2><?= $cesta[2]["tipo"] ?></h2>
+                        <h6><?= $cesta[2]["alimentos"] ?> - Alimentos</h6>
+                        <h6><?= $cesta[2]["higiene"] ?> - Higiene Pessoal</h6>
+                        <h2>R$ <?= $cesta[2]["valor"] ?></h2>
+                        <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
+                    </div>
+                <?php } ?>
             </div>
         </div>
 
@@ -128,34 +133,42 @@
                     </form>
                 </div>
                 <div class="time">
-                    <a href="https://curriculumnoviceleo.000webhostapp.com/" target="blank"><div class="integrante">
-                        <div class="img-integrante" id="img-leonardo"></div>
-                        <div class="info-integrante">
-                            <h3>Leonardo Bagatim</h3>
-                            <h5><i>E-commerce Coordinator</i></h5>
+                    <a href="https://curriculumnoviceleo.000webhostapp.com/" target="blank">
+                        <div class="integrante">
+                            <div class="img-integrante" id="img-leonardo"></div>
+                            <div class="info-integrante">
+                                <h3>Leonardo Bagatim</h3>
+                                <h5><i>E-commerce Coordinator</i></h5>
+                            </div>
                         </div>
-                    </div></a>
-                    <a href=""><div class="integrante">
-                        <div class="img-integrante" id="img-reinaldo"></div>
-                        <div class="info-integrante">
-                            <h3>Reinaldo Vieira</h3>
-                            <h5><i>Journalist</i></h5>
+                    </a>
+                    <a href="">
+                        <div class="integrante">
+                            <div class="img-integrante" id="img-reinaldo"></div>
+                            <div class="info-integrante">
+                                <h3>Reinaldo Vieira</h3>
+                                <h5><i>Journalist</i></h5>
+                            </div>
                         </div>
-                    </div></a>
-                    <a href="https://curriculo-renan.000webhostapp.com/" target="blank"><div class="integrante">
-                        <div class="img-integrante" id="img-renan"></div>
-                        <div class="info-integrante">
-                            <h3>Renan Santos</h3>
-                            <h5><i>Software Development</i></h5>
+                    </a>
+                    <a href="https://curriculo-renan.000webhostapp.com/" target="blank">
+                        <div class="integrante">
+                            <div class="img-integrante" id="img-renan"></div>
+                            <div class="info-integrante">
+                                <h3>Renan Santos</h3>
+                                <h5><i>Software Development</i></h5>
+                            </div>
                         </div>
-                    </div></a>
-                    <a href="https://curriculotamires.000webhostapp.com/Curriculo_Tamires.html" target="blank"><div class="integrante">
-                        <div class="img-integrante" id="img-tamires"></div>
-                        <div class="info-integrante">
-                            <h3>Tamires Pereira</h3>
-                            <h5><i>Software Development</i></h5>
+                    </a>
+                    <a href="https://curriculotamires.000webhostapp.com/Curriculo_Tamires.html" target="blank">
+                        <div class="integrante">
+                            <div class="img-integrante" id="img-tamires"></div>
+                            <div class="info-integrante">
+                                <h3>Tamires Pereira</h3>
+                                <h5><i>Software Development</i></h5>
+                            </div>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
             </div>
         </div>

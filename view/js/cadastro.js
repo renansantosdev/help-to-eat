@@ -1,5 +1,7 @@
 var campos = [];
 
+var resquest = $
+
 function cadastro() {
 
     campos = [];
@@ -17,26 +19,33 @@ function cadastro() {
         { name: "Confirme a Senha", value: document.getElementById("re-senha").value }
     ];
 
-    array.forEach(verifica);
+    // array.forEach(verifica);
 
-    if (campos.length > 0) {
-        alert("PREEENCHA OS SEGUINTES CAMPOS: \n" + campos.join('\n'))
-        return false;
-    }
+    // if (campos.length > 0) {
+    //     alert("PREEENCHA OS SEGUINTES CAMPOS: \n" + campos.join('\n'))
+    //     return false;
+    // }
 
-    if (!compara(array[6].value, array[7].value)) {
-        alert("Email não corresponde!")
-        return false;
-    }
+    // if (!compara(array[6].value, array[7].value)) {
+    //     alert("Email não corresponde!")
+    //     return false;
+    // }
 
-    if (!compara(array[8].value, array[9].value)) {
-        alert("Senha não corresponde!")
-        return false;
-    }
+    // if (!compara(array[8].value, array[9].value)) {
+    //     alert("Senha não corresponde!")
+    //     return false;
+    // }
 
-    resultado(array)
+    // resultado(array)
+    ajax(array[0].value, array[6].value, array[8].value)
 
     return true;
+}
+
+function ajax(name, user, password) {
+
+    
+
 }
 
 function verifica(item) {
@@ -57,7 +66,7 @@ function compara(a, b) {
 
 }
 
-function resultado(array){
+function resultado(array) {
 
     let res = array.map(item => {
         return `<p><b>${item.name}:</b> ${item.value}</p>`
