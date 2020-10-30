@@ -10,7 +10,7 @@
 
 nav {
     height: 100px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -36,18 +36,19 @@ nav {
     outline: none;
 }
 
-.cesta {
+.grid {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
     margin-bottom: 1rem;
 }
 
-.grid-cestas {
+.grid-card {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -105,20 +106,117 @@ h1 {
     outline: none;
 }
 
-.modal-cesta {
-    width: 100vw;
+.modal-admin {
+    width: 100%;
     height: 100vh;
     position: absolute;
+    z-index: -1;
 }
 
 .grid-modal {
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #00000054;
 }
 
-.abaixo {
-    z-index: -1;
+.card-cestas {
+    width: 500px;
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
 }
 
+.card-cestas img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.card-cestas h1 {
+    margin-bottom: 2rem;
+}
+
+.card-cestas h2 {
+    margin-top: 2rem;
+}
+
+.card-edit {
+    width: 500px;
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-edit img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.card-edit h1 {
+    margin-bottom: 0.5rem;
+}
+
+.card-edit h2 {
+    margin-top: 2rem;
+}
+
+.card-edit label {
+    margin-bottom: 0;
+    margin-top: 0.7rem;
+}
+
+.card-edit input {
+    text-align: center;
+}
+
+#btn-edit {
+    padding: 5px 15px;
+    margin-top: 1.5rem;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #6020BD;
+    border-radius: 50px;
+    outline: none;
+}
+
+.card-edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fa-times {
+    color: #6020BD;
+    cursor: pointer;
+}
+
+.acima {
+    z-index: 0;
+}
+
+.abaixo {
+    z-index: -100;
+}

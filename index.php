@@ -87,7 +87,7 @@ $cesta = $cestaModel->getCesta();
                         <h2><?= $cesta[0]["tipo"] ?></h2>
                         <h6><?= $cesta[0]["alimentos"] ?> - Alimentos</h6>
                         <h6><?= $cesta[0]["higiene"] ?> - Higiene Pessoal</h6>
-                        <h2>R$ <?= $cesta[0]["valor"] ?></h2>
+                        <h2>R$ <?= $cesta[0]["valor"] ?>,00</h2>
                         <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                     </div>
                 <?php } ?>
@@ -97,7 +97,7 @@ $cesta = $cestaModel->getCesta();
                         <h2><?= $cesta[1]["tipo"] ?></h2>
                         <h6><?= $cesta[1]["alimentos"] ?> - Alimentos</h6>
                         <h6><?= $cesta[1]["higiene"] ?> - Higiene Pessoal</h6>
-                        <h2>R$ <?= $cesta[1]["valor"] ?></h2>
+                        <h2>R$ <?= $cesta[1]["valor"] ?>,00</h2>
                         <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                     </div>
                 <?php } ?>
@@ -107,7 +107,7 @@ $cesta = $cestaModel->getCesta();
                         <h2><?= $cesta[2]["tipo"] ?></h2>
                         <h6><?= $cesta[2]["alimentos"] ?> - Alimentos</h6>
                         <h6><?= $cesta[2]["higiene"] ?> - Higiene Pessoal</h6>
-                        <h2>R$ <?= $cesta[2]["valor"] ?></h2>
+                        <h2>R$ <?= $cesta[2]["valor"] ?>,00</h2>
                         <button id="btn-doar" onclick="desenvolvimento()">DOAR</button>
                     </div>
                 <?php } ?>
